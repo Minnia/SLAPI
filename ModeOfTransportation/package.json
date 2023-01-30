@@ -16,6 +16,7 @@
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
     "@react-navigation/stack": "^6.3.10",
+    "@reduxjs/toolkit": "^1.9.2",
     "axios": "^1.2.2",
     "dotenv": "^16.0.3",
     "fuse.js": "^6.6.2",
