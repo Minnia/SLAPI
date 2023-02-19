@@ -57,7 +57,7 @@ export const loginUser = createSlice({
 // Action creators are generated for each case reducer function
 export const {login, logout} = loginUser.actions;
 
-export const selectIsLoggdIn = (state: any) => state.loginUser.isLoggedIn;
-export const selectUserInfo = (state: any) => state.loginUser.userInfo;
+export const selectIsLoggdIn = (state: any) => state.login.isLoggedIn;
+export const selectUserInfo = (state: any) => state.login.userInfo;
 
 export default loginUser.reducer;

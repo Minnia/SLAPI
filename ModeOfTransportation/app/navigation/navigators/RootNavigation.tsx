@@ -9,20 +9,17 @@ import {Stacks} from '../types';
 const S = createStackNavigator();
 
 const RootNavigation: FC = () => {
-  // const isLoggedIn = useSelector(selectIsLoggdIn);
-  // console.log('IS LOGGED IN', isLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggdIn);
+
+  const LoggedIn = <S.Screen name={Stacks.LOGGED_IN} component={LoggedInStack} />
+  const LoggedOut =  <S.Screen name={Stacks.LOGGED_IN} component={LoggedOutStack} />
   return (
     <S.Navigator
       screenOptions={{
         gestureEnabled: false,
         headerShown: false,
       }}>
-      <S.Screen
-        // name={isLoggedIn ? Stacks.LOGGED_IN : Stacks.LOGGED_OUT}
-        name={Stacks.LOGGED_OUT}
-        // component={isLoggedIn ? LoggedOutStack : LoggedOutStack}
-        component={LoggedOutStack}
-      />
+      {isLoggedIn ? LoggedIn  : LoggedOut }
     </S.Navigator>
   );
 };
